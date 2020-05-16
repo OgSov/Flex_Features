@@ -1,0 +1,258 @@
+body{
+    background-color: white;
+    font-size: 1em;
+    font-family: "Font Awesome 5 Free", 'Roboto', sans-serif;
+    /* display: flex;
+    justify-content: center;
+    flex-basis: auto; */
+}
+.white{
+    background-color: white;
+    height: 200px;
+}
+#main{
+    display: flex;
+    justify-content: center;
+    flex-basis: auto;
+    background-color: rgb(241, 232, 232);
+}
+.container{
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.text-center{
+    text-align: center;
+}
+.container h1{
+    font-weight: 700;
+    font-size: 2em;
+    margin: 1.5em 0 1.5em 0;
+}
+.container ul{
+    padding-bottom: 1em;
+}
+.container>p{
+    margin-bottom: 3em;
+}
+.container .text{
+    color: #666;
+}
+img.w80{
+    width: 75%;
+    transform-origin: bottom;
+}
+#main .cols{
+    display: flex;
+    justify-content: center;
+}
+#main .col-3{
+    width: 30%;
+}
+#main .container .left{
+    text-align: right;
+    padding-left: 4.5%;
+}
+#main .container .right{
+    padding-right: 4.5%;
+}
+#main .container .cols h2{
+    text-transform: uppercase;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+#main .container .left h2{
+    padding: 1em 1em 1em 0;
+}
+#main .container .right h2{
+    padding: 1em 0 1em 1em;
+}
+#main .cols .left li p{
+    line-height: 1.5em;
+    margin-right: 1em;
+    padding: 1em 1em 1em 1em;
+    border-top: 2px solid #999;
+    border-left: 2px solid #999;
+}
+#main .left li:hover p{
+    padding: 1em 1em 1em 1em;
+    border-top: 2px solid blue;
+    border-left: 2px solid blue;
+    transition: 0.5s;
+}
+#main .cols .right li p{
+    line-height: 1.5em;
+    margin-left: 1em;
+    padding: 1em 1em 1em 1em;
+    border-top: 2px solid #999;
+    border-right: 2px solid #999;
+}
+#main .right li:hover p{
+    padding: 1em 1em 1em 1em;
+    border-top: 2px solid blue;
+    border-right: 2px solid blue;
+    transition: 0.5s;
+}
+
+/* PSEUDO ELEMENTS  */
+
+.left li::before{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 2px solid #999;
+    border-radius: 100%;
+    position: absolute;
+    display: block;
+    margin-top: 2em;
+    margin-left: 21.5em;
+}
+.left li:hover::before{
+    background-color: blue;
+    border: 2px solid blue;
+    transition: 0.5s;
+}
+.left li::after{
+    content: "\f042";
+    font-size: 3em;
+    font-weight: 900;
+    position: absolute;
+    display: block;
+    margin-left: 7.24em;
+    margin-top: -3.17em;
+}
+
+.right li::before{
+    content: "";
+    width: 50px;
+    height: 50px;
+    border: 2px solid #999;
+    border-radius: 100%;
+    position: absolute;
+    display: block;
+    margin-left: -2.4em;
+    margin-top: 2em;
+    
+}
+.right li:hover::before{
+    background-color: blue;
+    border: 2px solid blue;
+    transition: 0.5s;
+}
+.right li::after{
+    content: "\f042";
+    font-size: 3em;
+    font-weight: 900;
+    position: absolute;
+    display: block;
+    margin-left: -0.73em;
+    margin-top: -3.17em;
+}
+@media (max-width: 1225px){
+    #main .container {
+    width: 950px;
+    }
+    #main .container figure{
+    display: none;
+    }
+    #main .container .col-3{
+    width: 50%;
+    }
+    #main .container .left{
+    padding-left: 0;
+    }
+    .left li::before{
+    margin-top: 2.4em;
+    margin-left: 22.6em;
+    }
+    #main .cols .left li {
+    line-height: 1.5em;
+    margin: 1em 2em 1em 1em;
+    padding: 1em 2em 1em 1em;
+    }
+    #main .container .right{
+    padding-right: 0;
+    }
+    .right li::before{
+    margin-top: 2.4em;
+    margin-left: -2.3em;
+    }
+    #main .cols .right li {
+    line-height: 1.5em;
+    margin: 1em 1em 1em 2em;
+    padding: 1em 1em 1em 2em;
+    }
+    .left li::after{
+        margin-left: 7.6em;
+        margin-top: -2.9em;
+    }
+    .right li::after{
+        margin-left: -0.7em;
+        margin-top: -2.9em;
+    }
+}
+@media (max-width: 975px){
+    body{
+    display: flex;
+    justify-content: center;
+    flex-basis: auto;
+    }
+    #main{
+    width: 600px;
+  }
+  #main .container .cols{
+    flex-direction: column;
+  }
+  #main .container .col-3{
+    width: 95%;
+  }
+  #main .container .left{
+      text-align: left;
+  }
+  #main .cols .left li {
+    line-height: 1.5em;
+    margin: 1em 0 1em 3em;
+    padding: 1em 1em 1em 1em;
+    }
+  #main .cols .right li {
+    line-height: 1.5em;
+    margin: 1em 1em 1em 3em;
+    padding: 1em 1em 1em 1em;
+    }
+    #main .cols .left li h2{
+        padding-left: 1em;
+    }
+    #main .cols .left li p{
+    margin-left: 1em;
+    border-left: none;
+    border-right: 2px solid #999;
+    }
+    #main .cols .left li:hover p{
+        border-top: 2px solid blue;
+        border-right: 2px solid blue;
+        transition: 0.4s;
+    }
+    .left li::before{
+    margin-left: -2.4em;
+    margin-top: 2.2em;
+    }
+    .left li:after{
+    margin-left: -0.73em;
+    margin-top: -2.45em;
+    }
+    .right li:after{
+    margin-left: -0.7em;
+    margin-top: -2.38em;
+    }
+
+}
+@keyframes bounce {
+    0%{ transform: translateY(0);}
+    50%  { transform: translateY(-25px);}
+    100% { transform: translateY(0);}
+}
+.w80{
+    animation: bounce 4s;
+    animation-iteration-count: infinite;
+}
